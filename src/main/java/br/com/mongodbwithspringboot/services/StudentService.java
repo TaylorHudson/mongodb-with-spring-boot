@@ -68,7 +68,7 @@ public class StudentService {
             if (student == null || student.getId() == null)
                 throw new InvalidDataException("Id or student should not be null");
 
-            return studentRepository.insert(student);
+            return studentRepository.save(student);
 
         }catch (Exception e) {
             throw new BadRequestException("The update operation could not be performed: " + e.getMessage());
